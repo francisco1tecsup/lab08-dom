@@ -72,3 +72,20 @@ btnRetroceder.addEventListener("click", function() {
   descripcionchip.textContent = arreglo7400[posicion].getdescripcion();
   preciochip.textContent = "S/ " + arreglo7400[posicion].getprecio();
 });
+
+btnagregar.addEventListener("click", function() {
+  const li = document.createElement("li");
+  li.textContent = arreglo7400[posicion].getnombre() + ":  " + arreglo7400[posicion].getdescripcion();
+  const btnBorrar = document.createElement("button");
+  btnBorrar.textContent = "❌";
+  btnBorrar.addEventListener("click", () => {
+    li.remove();
+  });
+  li.appendChild(btnBorrar);
+  listaproductos.appendChild(li);
+});
+
+btnlimpiar.addEventListener("click", function() {
+  listaproductos.innerHTML = '';
+
+});
