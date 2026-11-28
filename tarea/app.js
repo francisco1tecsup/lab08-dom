@@ -28,6 +28,8 @@ class Componente {
   }
 }
 
+//Creacion de objetos
+
 const arreglo7400 = [];
 
 for (let i = 0; i < listaimg.length; i++){
